@@ -67,15 +67,21 @@ var game = {
       clearInterval(counter);
 
     }
+  },
+  selectAnswer: function() {
+
+    $(".answer").on("click", function() {
+
+      var chosenAnswer = $(this).html();
+
+      console.log(chosenAnswer);
+
+    })
+
   }
 
 };
 
-
-console.log(game.question1.ask);
-console.log(game.question2.correctAnswer);
-console.log(game.question3.wrongAnswerOne);
-console.log(game.question4.correctAnswer);
-console.log(game.question5.wrongAnswerThree);
-
 game.ready();
+
+game.selectAnswer();
