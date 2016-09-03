@@ -1,4 +1,5 @@
 var time = 20;
+var questionsCorrect = 0;
 
 var game = {
   question1: {
@@ -63,7 +64,6 @@ var game = {
 
     if (time === 0) {
 
-      console.log("done");
       clearInterval(counter);
 
     }
@@ -74,9 +74,36 @@ var game = {
 
       var chosenAnswer = $(this).html();
 
-      console.log(chosenAnswer);
+      var rightAnswer = game.question1.correctAnswer;
 
-    })
+      console.log(chosenAnswer);
+      console.log(rightAnswer);
+
+      if (chosenAnswer == rightAnswer) {
+
+        $("#right-wrong").html("CORRECT!");
+        questionsCorrect++;
+        game.nextQuestion();
+
+      }
+      else {
+
+        $("#right-wrong").html("WRONG!");
+        game.nextQuestion();
+
+      }
+
+    });
+
+  },
+  nextQuestion: function() {
+
+    $("#right-wrong").empty();
+    $("#question").html(game.question2.ask);
+    $("#a1").html(game.question2.wrongAnswerOne);
+    $("#a2").html(game.question2.wrongAnswerTwo);
+    $("#a3").html(game.question2.correctAnswer);
+    $("#a4").html(game.question2.wrongAnswerThree);
 
   }
 
