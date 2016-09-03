@@ -1,0 +1,48 @@
+body {
+  background-image: url("../images/cowboy-bebop.jpg");
+  background-size: cover;
+  background-size: 100% auto;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.title {
+  font-family: Serial Publication;
+  font-size: 125px;
+  font-weight: bold;
+  color: white;
+  border: solid;
+}
+
+.big-buffer {
+  margin-top: 50px;
+}
+
+.med-buffer {
+  margin-top: 30px;
+}
+
+#question {
+  font-family: Serial Publication;
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+}
+
+#a1, #a2, #a3, #a4 {
+  font-family: Abel;
+  font-size: 55px;
+  font-weight: bold;
+  color: white;
+  margin-top: 15px;
+}
+
+#timer {
+  font-family: Abel;
+  font-size: 55px;
+  color: white;
+}
